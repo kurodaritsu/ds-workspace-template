@@ -1,0 +1,41 @@
+{
+    "name": "ds-workspace-python-devcontainer",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": {
+            "UV_VERSION": "0.6.12",
+            "DEBIAN_VERSION": "bookworm"
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/sshd:1": {}
+    },
+    "postCreateCommand": "uv sync --frozen",
+    "shutdownAction": "stopContainer",
+    "containerEnv": {
+        "PYTHONPATH": "${containerWorkspaceFolder}",
+        "UV_COMPILE_BYTECODE": "1",
+        "PYTHONUNBUFFERED": "True",
+        "UV_LINK_MODE": "copy",
+        "UV_PROJECT_ENVIRONMENT": "/home/vscode/.venv"
+    },
+
+    // Comment out this line if you don't have a .env file in your root
+    // repository. This is meant to store environment variables locally
+    "runArgs": ["--env-file", ".env"],
+
+    "remoteUser": "vscode",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-toolsai.jupyter",
+                "ms-python.python",
+                "charliermarsh.ruff",
+                "redhat.vscode-yaml",
+                "tamasfe.even-better-toml"
+            ]
+        }
+    }
+}
