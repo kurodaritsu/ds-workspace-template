@@ -1,4 +1,4 @@
-ARG UV_VERSION=0.6.12-python3.13-bookworm
+ARG UV_VERSION=0.6.12
 ARG BASE_OS_VERSION=bookworm
 
 FROM ghcr.io/astral-sh/uv:$UV_VERSION as uv
