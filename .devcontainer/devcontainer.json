@@ -5,26 +5,28 @@
         "context": "..",
         "args": {
             "UV_VERSION": "0.6.12",
-            "DEBIAN_VERSION": "bookworm"
+            "PYTHON_VERSION": "3.13",
+            "OS_VERSION": "bookworm"
         }
     },
     "features": {
         "ghcr.io/devcontainers/features/git:1": {},
         "ghcr.io/devcontainers/features/sshd:1": {}
     },
-    "postCreateCommand": "uv sync --frozen",
+    "postCreateCommand": "uv sync",
     "shutdownAction": "stopContainer",
     "containerEnv": {
         "PYTHONPATH": "${containerWorkspaceFolder}",
+        "JUPYTER_DATA_DIR": "${containerWorkspaceFolder}",
         "UV_COMPILE_BYTECODE": "1",
         "PYTHONUNBUFFERED": "True",
-        "UV_LINK_MODE": "copy",
-        "UV_PROJECT_ENVIRONMENT": "/home/vscode/.venv"
+        "UV_LINK_MODE": "copy"
     },
 
-    // Comment out this line if you don't have a .env file in your root
-    // repository. This is meant to store environment variables locally
-    "runArgs": ["--env-file", ".env"],
+    // Run this line if you have a .env file in your root repository. This is
+    // meant to store environment variables locally
+
+    // "runArgs": ["--env-file", ".env"],
 
     "remoteUser": "vscode",
     "customizations": {
