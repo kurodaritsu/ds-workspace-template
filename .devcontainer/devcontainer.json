@@ -13,7 +13,6 @@
         "ghcr.io/devcontainers/features/sshd:1": {}
     },
     "postCreateCommand": "uv sync",
-    "postStartCommand": "git update-index --skip-worktree .env",
     "shutdownAction": "stopContainer",
     "containerEnv": {
         "PYTHONPATH": "${containerWorkspaceFolder}",
@@ -22,7 +21,7 @@
         "PYTHONUNBUFFERED": "True",
         "UV_LINK_MODE": "copy"
     },
-    // "runArgs": ["--env-file", ".env"],
+    "runArgs": ["--env-file", ".env"],
     "remoteUser": "vscode",
     "customizations": {
         "vscode": {
