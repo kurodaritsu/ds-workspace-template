@@ -1,0 +1,29 @@
+# NOTE: open-pull-requests-limit: 0 is used until
+# https://github.com/dependabot/dependabot-core/issues/1828 is fixed
+
+version: 2
+updates:
+  - package-ecosystem: "devcontainers"
+    open-pull-requests-limit: 0
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "saturday"
+      time: "01:00"
+      timezone: "Asia/Singapore"
+
+  - package-ecosystem: "pip"
+    open-pull-requests-limit: 0
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "saturday"
+      time: "01:00"
+      timezone: "Asia/Singapore"
+    groups:
+      pip-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "major"
