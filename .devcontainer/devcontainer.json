@@ -30,7 +30,8 @@
                 "ms-python.python",
                 "charliermarsh.ruff",
                 "redhat.vscode-yaml",
-                "tamasfe.even-better-toml"
+                "tamasfe.even-better-toml",
+                "njpwerner.autodocstring"
             ]
         }
     }
