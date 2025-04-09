@@ -12,7 +12,10 @@
         "ghcr.io/devcontainers/features/git:1": {},
         "ghcr.io/devcontainers/features/sshd:1": {}
     },
-    "postCreateCommand": "uv sync",
+    "postCreateCommand": {
+        "sync-uv": "uv sync --frozen",
+        "create-dummy-env": "bash scripts/create_env_file.sh"
+    },
     "shutdownAction": "stopContainer",
     "containerEnv": {
         "PYTHONPATH": "${containerWorkspaceFolder}",
