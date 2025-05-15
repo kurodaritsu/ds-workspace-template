@@ -2,6 +2,10 @@
 #    uv pip compile pyproject.toml -o requirements.txt
 asttokens==3.0.0
     # via stack-data
+certifi==2025.4.26
+    # via requests
+charset-normalizer==3.4.2
+    # via requests
 comm==0.2.2
     # via ipykernel
 contourpy==1.3.1
@@ -16,6 +20,8 @@ executing==2.2.0
     # via stack-data
 fonttools==4.57.0
     # via matplotlib
+idna==3.10
+    # via requests
 ipykernel==6.29.5
     # via ds-container-workspace (pyproject.toml)
 ipython==9.0.2
@@ -90,6 +96,8 @@ pyzmq==26.4.0
     # via
     #   ipykernel
     #   jupyter-client
+requests==2.32.3
+    # via ds-container-workspace (pyproject.toml)
 seaborn==0.13.2
     # via ds-container-workspace (pyproject.toml)
 six==1.17.0
@@ -110,5 +118,7 @@ traitlets==5.14.3
     #   matplotlib-inline
 tzdata==2025.2
     # via pandas
+urllib3==2.4.0
+    # via requests
 wcwidth==0.2.13
     # via prompt-toolkit
