@@ -36,5 +36,12 @@
     "[github-actions-workflow]": {
         "editor.defaultFormatter": "redhat.vscode-yaml",
         "editor.tabSize": 2
-    }
+    },
+    "python.analysis.exclude": [
+        "**/node_modules",
+        "**/__pycache__",
+        ".git",
+        "/.venv",
+        "/env"
+    ]
 }
