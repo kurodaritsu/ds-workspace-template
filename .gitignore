@@ -175,3 +175,7 @@ cython_debug/
 
 # Other files
 runtime/
+
+# Internal Data
+data/*
+!data/.gitkeep
