@@ -24,8 +24,10 @@ idna==3.10
     # via requests
 ipykernel==6.29.5
     # via ds-container-workspace (pyproject.toml)
-ipython==9.0.2
-    # via ipykernel
+ipython==9.2.0
+    # via
+    #   ds-container-workspace (pyproject.toml)
+    #   ipykernel
 ipython-pygments-lexers==1.1.1
     # via ipython
 jedi==0.19.2
