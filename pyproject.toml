@@ -12,6 +12,7 @@ dependencies = [
     "ipython==9.2.0",
     "ipykernel==6.29.5",
     "requests==2.32.3",
+    "tornado==6.5.1"
 ]
 
 [tool.hatch.build.targets.wheel]
