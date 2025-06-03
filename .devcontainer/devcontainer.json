@@ -1,5 +1,5 @@
 {
-    "name": "ds-workspace-python-devcontainer",
+    "name": "${localWorkspaceFolderBasename}-devcontainer",
     "build": {
         "dockerfile": "Dockerfile",
         "context": "..",
