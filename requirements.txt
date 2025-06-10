@@ -98,7 +98,7 @@ pyzmq==26.4.0
     # via
     #   ipykernel
     #   jupyter-client
-requests==2.32.3
+requests==2.32.4
     # via ds-container-workspace (pyproject.toml)
 seaborn==0.13.2
     # via ds-container-workspace (pyproject.toml)

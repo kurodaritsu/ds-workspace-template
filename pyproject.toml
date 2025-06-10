@@ -11,7 +11,7 @@ dependencies = [
     "seaborn==0.13.2",
     "ipython==9.2.0",
     "ipykernel==6.29.5",
-    "requests==2.32.3",
+    "requests==2.32.4",
     "tornado==6.5.1"
 ]
 
