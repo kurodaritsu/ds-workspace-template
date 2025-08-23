@@ -17,9 +17,13 @@ dependencies = [
     "tornado==6.5.1",
 ]
 
-[tool.hatch.build.targets.wheel]
-packages = ["tools"]
+[tool.ruff]
+namespace-packages = ["src"]
+
+[tool.uv.build-backend]
+module-root = ""
+module-name = "src"
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["uv_build"]
+build-backend = "uv_build"
