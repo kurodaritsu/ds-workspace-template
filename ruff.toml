@@ -1,3 +1,5 @@
+include = ["pyproject.toml", "src/**/*.py", "scripts/**/*.py"]
+
 exclude = [
     ".bzr",
     ".direnv",
@@ -22,6 +24,7 @@ exclude = [
     "buck-out",
     "build",
     "dist",
+    "env",
     "node_modules",
     "site-packages",
     "venv",
@@ -30,31 +33,45 @@ exclude = [
 line-length = 72
 indent-width = 4
 
-
 [lint]
 select = ["ALL"]
 ignore = [
+    "ANN002",
+    "ANN003",
     "COM812",
     "COM819",
     "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D105",
+    "D107",
     "D203",
     "D213",
     "D300",
     "E111",
     "E114",
     "E117",
+    "FBT001",
+    "FBT002",
     "ISC001",
     "ISC002",
+    "PGH003",
+    "PTH123",
     "Q000",
     "Q001",
     "Q002",
     "Q003",
+    "TC001",
     "W191",
 ]
 
 fixable = ["ALL"]
 unfixable = []
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[lint.pylint]
+max-args = 6
 
 [format]
 quote-style = "double"
