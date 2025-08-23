@@ -179,3 +179,4 @@ runtime/
 # Internal Data
 data/*
 !data/.gitkeep
+**/client_secrets.json
