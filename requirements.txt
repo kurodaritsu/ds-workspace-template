@@ -24,7 +24,7 @@ decorator==5.2.1
     # via ipython
 executing==2.2.0
     # via stack-data
-fonttools==4.57.0
+fonttools==4.61.0
     # via matplotlib
 h11==0.16.0
     # via httpcore
