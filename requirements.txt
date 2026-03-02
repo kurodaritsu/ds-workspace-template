@@ -56,7 +56,7 @@ jupyter-core==5.7.2
     #   jupyter-client
 kiwisolver==1.4.8
     # via matplotlib
-matplotlib==3.10.1
+matplotlib==3.10.8
     # via
     #   ds-container-workspace (pyproject.toml)
     #   seaborn
@@ -86,7 +86,9 @@ parso==0.8.4
 pexpect==4.9.0
     # via ipython
 pillow==12.1.1
-    # via matplotlib
+    # via
+    #   ds-container-workspace (pyproject.toml)
+    #   matplotlib
 platformdirs==4.3.7
     # via jupyter-core
 prompt-toolkit==3.0.50
