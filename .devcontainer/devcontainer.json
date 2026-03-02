@@ -4,13 +4,9 @@
         "dockerfile": "Dockerfile",
         "context": "..",
         "args": {
-            "UV_VERSION": "0.6.12",
+            "UV_VERSION": "0.10.6",
             "BASE_OS_VERSION": "bookworm"
         }
-    },
-    "features": {
-        "ghcr.io/devcontainers/features/git:1": {},
-        "ghcr.io/devcontainers/features/sshd:1": {}
     },
     "postCreateCommand": {
         "sync-uv": "uv sync",
