@@ -1,13 +1,13 @@
 [project]
 name = "ds-container-workspace"
-version = "2025.08.004"
+version = "2026.03.001"
 requires-python = ">=3.13"
 license = { file = "LICENSE" }
 
 dependencies = [
     "numpy==2.2.4",
     "pandas==2.2.3",
-    "matplotlib==3.10.1",
+    "matplotlib==3.10.8",
     "seaborn==0.13.2",
     "ipython==9.2.0",
     "ipykernel==6.29.5",
@@ -16,6 +16,7 @@ dependencies = [
     "aiofiles==24.1.0",
     "tornado==6.5.1",
     "fonttools==4.61.0",
+    "pillow==12.1.1",
 ]
 
 [tool.ruff]
