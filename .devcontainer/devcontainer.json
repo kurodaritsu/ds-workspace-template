@@ -8,10 +8,6 @@
             "BASE_OS_VERSION": "bookworm"
         }
     },
-    "features": {
-        "ghcr.io/devcontainers/features/git:1": {},
-        "ghcr.io/devcontainers/features/sshd:1": {}
-    },
     "postCreateCommand": {
         "sync-uv": "uv sync",
         "create-dummy-env": "bash scripts/create_env_file.sh"
