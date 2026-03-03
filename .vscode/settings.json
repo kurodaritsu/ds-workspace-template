@@ -42,6 +42,13 @@
         "**/__pycache__",
         ".git",
         "/.venv",
-        "/env"
+        "/env",
+        ".venv",
+        "/.vscode",
+        "/.github",
+        "/.devcontainer",
+        "**/.*",
+        "**/uv.lock",
+        "**/data",
     ]
 }
