@@ -180,3 +180,6 @@ runtime/
 data/*
 !data/.gitkeep
 **/client_secrets.json
+
+# Git Worktrees
+.worktrees/
