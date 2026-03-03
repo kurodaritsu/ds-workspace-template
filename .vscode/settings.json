@@ -8,6 +8,7 @@
     "editor.rulers": [
         72,
     ],
+    "python.languageServer": "None",
     "python.analysis.typeCheckingMode": "standard",
     "python.testing.pytestEnabled": true,
     "python.testing.pytestArgs": [
