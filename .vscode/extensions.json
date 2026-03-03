@@ -5,6 +5,7 @@
         "charliermarsh.ruff",
         "redhat.vscode-yaml",
         "tamasfe.even-better-toml",
+        "astral-sh.ty",
         "njpwerner.autodocstring"
     ]
 }
