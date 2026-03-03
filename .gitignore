@@ -181,5 +181,13 @@ data/*
 !data/.gitkeep
 **/client_secrets.json
 
+# Claude Plan Blueprints
+# These are created through `superpowers` plugin. These will be ignored for the
+# meantime as all generated plans will need to be approved to the user first
+docs/plans/*
+
+# Internal Settings
+**/*.local.*
+
 # Git Worktrees
 .worktrees/
