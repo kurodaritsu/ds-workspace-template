@@ -1,27 +1,39 @@
 {
     "name": "${localWorkspaceFolderBasename}-devcontainer",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "context": "..",
-        "args": {
-            "UV_VERSION": "0.10.6",
-            "BASE_OS_VERSION": "bookworm"
+    "dockerComposeFile": "../.devcontainer/docker-compose.yml",
+    "service": "vscode",
+    "remoteUser": "vscode",
+    "runServices": [
+        "vscode"
+    ],
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        {
+            "source": "cache-${devcontainerId}",
+            "target": "/home/${remoteUser}/.cache",
+            "type": "volume"
+        },
+        {
+            "source": "${localEnv:HOME}/.ssh",
+            "target": "/home/${remoteUser}/.ssh",
+            "type": "bind"
+        },
+        {
+            "source": "venv-${devcontainerId}",
+            "target": "${containerWorkspaceFolder}/.venv",
+            "type": "volume"
         }
-    },
-    "postCreateCommand": {
-        "sync-uv": "uv sync",
-        "create-dummy-env": "bash scripts/create_env_file.sh"
-    },
-    "shutdownAction": "stopContainer",
+    ],
+    "updateContentCommand": "sudo chown -R vscode /home/vscode/.cache /home/vscode/.ssh ${containerWorkspaceFolder}/.venv",
+    "postCreateCommand": "uv sync",
     "containerEnv": {
         "PYTHONPATH": "${containerWorkspaceFolder}",
+        "UV_PROJECT_ENVIRONMENT": "${containerWorkspaceFolder}/.venv",
         "JUPYTER_DATA_DIR": "${containerWorkspaceFolder}",
         "UV_COMPILE_BYTECODE": "1",
         "PYTHONUNBUFFERED": "True",
         "UV_LINK_MODE": "copy"
     },
-    "runArgs": ["--env-file", ".env"],
-    "remoteUser": "vscode",
     "customizations": {
         "vscode": {
             "extensions": [
