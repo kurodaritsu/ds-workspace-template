@@ -8,7 +8,7 @@ permissions:
   contents: write
 
 jobs:
-  uv-sync:
+  dependabot-uv-sync:
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]'
 
