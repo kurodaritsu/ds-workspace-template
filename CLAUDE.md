@@ -40,6 +40,32 @@ uv run ruff check . --fix
 uv run ruff format .
 ```
 
+## Logging
+
+Never use `print()` in `src/` or `scripts/`. Ruff will flag it as an error (`T201`/`T203`) and auto-fix is disabled — you must replace it with a logger call.
+
+Use the shared `get_logger` utility:
+
+```python
+from src.utils import get_logger
+
+logger = get_logger(__name__)
+
+logger.debug("Detailed step: %s", value)
+logger.info("Starting analysis for %s", dataset_name)
+logger.warning("Missing values detected: %d rows affected", count)
+logger.error("Failed to load file: %s", path)
+```
+
+The default level is `INFO`. To change it for a specific logger:
+
+```python
+import logging
+logger = get_logger(__name__, level=logging.DEBUG)
+```
+
+`get_logger` works in both scripts and Jupyter notebooks — it auto-detects the kernel context and avoids duplicate output.
+
 ## Type Checking
 
 ty is Astral's type checker, configured via `pyproject.toml`.

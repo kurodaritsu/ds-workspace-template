@@ -1,4 +1,4 @@
-include = ["pyproject.toml", "src/**/*.py", "scripts/**/*.py"]
+include = ["pyproject.toml", "src/**/*.py", "scripts/**/*.py", "tests/**/*.py"]
 
 exclude = [
     ".bzr",
@@ -67,7 +67,7 @@ ignore = [
 ]
 
 fixable = ["ALL"]
-unfixable = []
+unfixable = ["T201", "T203"]
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 [lint.pylint]
