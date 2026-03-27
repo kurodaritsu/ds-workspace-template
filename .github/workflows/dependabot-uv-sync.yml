@@ -50,8 +50,8 @@ jobs:
       - name: Regenerate lockfiles
         if: steps.metadata.outputs.package-ecosystem == 'pip'
         run: |
-          uv pip compile pyproject.toml -o requirements.txt --python 3.13
           uv sync
+          uv export --no-hashes -o requirements.txt --python 3.13
 
       - name: Commit and push
         if: steps.metadata.outputs.package-ecosystem == 'pip'
