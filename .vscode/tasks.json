@@ -8,7 +8,7 @@
             "type": "shell",
             "command": [
                 "uv sync;",
-                "uv pip compile pyproject.toml -o requirements.txt;"
+                "uv export --no-hashes -o requirements.txt;"
             ],
             "presentation": {
                 "echo": false,
