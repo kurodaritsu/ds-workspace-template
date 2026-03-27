@@ -51,5 +51,6 @@
         "**/.*",
         "**/uv.lock",
         "**/data",
-    ]
+    ],
+    "python.testing.unittestEnabled": false
 }
