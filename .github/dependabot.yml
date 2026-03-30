@@ -7,23 +7,16 @@ updates:
     open-pull-requests-limit: 0
     directory: "/"
     schedule:
-      interval: "monthly"
-      day: "saturday"
-      time: "01:00"
-      timezone: "Asia/Singapore"
+      interval: "weekly"
 
   - package-ecosystem: "pip"
     open-pull-requests-limit: 0
     directory: "/"
     schedule:
-      interval: "monthly"
-      day: "saturday"
-      time: "01:00"
-      timezone: "Asia/Singapore"
-    groups:
-      pip-dependencies:
-        patterns:
-          - "*"
-        update-types:
-          - "minor"
-          - "major"
+      interval: "weekly"
+
+  - package-ecosystem: "uv"
+    open-pull-requests-limit: 0
+    directory: "/"
+    schedule:
+      interval: "weekly"
