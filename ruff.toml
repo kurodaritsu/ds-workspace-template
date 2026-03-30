@@ -81,3 +81,4 @@ line-ending = "auto"
 
 [lint.per-file-ignores]
 "tests/**" = ["INP001", "S101"]
+"scripts/**" = ["INP001"]
