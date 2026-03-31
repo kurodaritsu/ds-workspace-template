@@ -14,7 +14,7 @@ uv run pytest
 ## Run a specific test file
 
 ```bash
-uv run pytest tests/<file>
+uv run pytest tests/test_utils.py
 ```
 
 ## Filter tests by name
@@ -23,14 +23,7 @@ uv run pytest tests/<file>
 uv run pytest -k <test_name>
 ```
 
-## Verbose output
+## Additional resources
 
-```bash
-uv run pytest -v
-```
-
-## Run with coverage
-
-```bash
-uv run pytest --cov
-```
+- For common scenarios, see [examples.md](examples.md)
+- For full flag reference, see [reference.md](reference.md)
