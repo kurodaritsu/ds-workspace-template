@@ -22,6 +22,11 @@
             "source": "venv-${devcontainerId}",
             "target": "${containerWorkspaceFolder}/.venv",
             "type": "volume"
+        },
+        {
+            "source": "${localEnv:HOME}/.claude",
+            "target": "/home/${remoteUser}/.claude",
+            "type": "bind"
         }
     ],
     "updateContentCommand": "sudo chown -R vscode /home/vscode/.cache /home/vscode/.ssh ${containerWorkspaceFolder}/.venv",
