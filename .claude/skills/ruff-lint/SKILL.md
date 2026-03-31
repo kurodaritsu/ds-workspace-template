@@ -22,3 +22,14 @@ uv run ruff check . --fix
 ```bash
 uv run ruff format .
 ```
+
+## Lint a specific file
+
+```bash
+uv run ruff check src/utils.py
+```
+
+## Additional resources
+
+- For common scenarios, see [examples.md](examples.md)
+- For full flag reference, see [reference.md](reference.md)
