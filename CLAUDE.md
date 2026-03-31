@@ -22,14 +22,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Behavioral guidance lives in `.claude/rules/`:
 
-- `package-management.md` — uv dependency management
-- `lint-and-format.md` — ruff linting and formatting policy
-- `logging.md` — use `get_logger`, never `print()`
-- `type-checking.md` — ty type checker policy
-- `git-workflow.md` — feature branches, protected main
+- [`package-management.md`](.claude/rules/package-management.md) — uv dependency management
+- [`lint-and-format.md`](.claude/rules/lint-and-format.md) — ruff linting and formatting policy
+- [`logging.md`](.claude/rules/logging.md) — use `get_logger`, never `print()`
+- [`type-checking.md`](.claude/rules/type-checking.md) — ty type checker policy
+- [`git-workflow.md`](.claude/rules/git-workflow.md) — feature branches, protected main
 
 Runnable command skills live in `.claude/skills/`:
 
-- `ruff-lint/` — ruff check and format commands
-- `ty-check/` — ty check command
-- `pytest/` — pytest invocation patterns
+- [`ruff-lint/`](.claude/skills/ruff-lint/SKILL.md) — ruff check and format commands
+- [`ty-check/`](.claude/skills/ty-check.SKILL.md) — ty check command
+- [`pytest/`](.claude/skills/pytest/SKILL.md) — pytest invocation patterns
