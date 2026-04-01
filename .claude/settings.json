@@ -6,7 +6,7 @@
                 "hooks": [
                     {
                         "type": "command",
-                        "command": "python3 .claude/hooks/lint_hook.py"
+                        "command": "uv run .claude/hooks/lint_hook.py"
                     }
                 ]
             }
