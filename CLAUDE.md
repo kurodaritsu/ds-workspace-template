@@ -8,6 +8,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Structure
 
+| Hidden Directory | Purpose |
+|---|---|
+| `.claude/hooks/` | Shell hooks triggered by Claude Code events |
+| `.claude/rules/` | Behavioral rules loaded automatically by Claude Code |
+| `.claude/skills/` | Invokable command skills (ruff-lint, ty-check, pytest) |
+| `.devcontainer/` | Dev container configuration (Dockerfile, docker-compose) |
+| `.github/` | GitHub Actions workflows, Dependabot, and CODEOWNERS |
+| `.vscode/` | VS Code workspace settings and recommended extensions |
+| `.worktrees/` | Git worktrees for isolated feature branches |
+
 | Directory | Purpose |
 |---|---|
 | `app/` | Application entry points and runtime configuration |
@@ -18,12 +28,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | `scripts/` | Utility and automation scripts |
 | `src/` | Application source code |
 | `tests/` | Pytest test files |
-| `.claude/hooks/` | Shell hooks triggered by Claude Code events |
-| `.claude/rules/` | Behavioral rules loaded automatically by Claude Code |
-| `.claude/skills/` | Invokable command skills (ruff-lint, ty-check, pytest) |
-| `.devcontainer/` | Dev container configuration (Dockerfile, docker-compose) |
-| `.github/` | GitHub Actions workflows, Dependabot, and CODEOWNERS |
-| `.vscode/` | VS Code workspace settings and recommended extensions |
 
 ## Rules & Skills
 
