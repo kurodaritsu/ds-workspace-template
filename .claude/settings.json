@@ -17,7 +17,11 @@
                 "hooks": [
                     {
                         "type": "command",
-                        "command": "uv run .claude/hooks/lint_hook.py"
+                        "command": "bash .claude/hooks/ruff_lint.sh"
+                    },
+                    {
+                        "type": "command",
+                        "command": "bash .claude/hooks/ty_check.sh"
                     }
                 ]
             }
