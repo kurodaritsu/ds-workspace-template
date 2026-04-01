@@ -4,19 +4,26 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-`ds-workspace-template` is a data science Python workspace template using Python 3.13. It uses **uv** for package management, **ruff** for linting and formatting, **ty** for type checking, and **pytest** for testing.
+`ds-workspace-template` is a Python project workspace template that is used as its base contents for other Python projects. It uses **uv** for package management, **ruff** for linting and formatting, **ty** for type checking, and **pytest** for testing.
 
 ## Project Structure
 
 | Directory | Purpose |
 |---|---|
+| `app/` | Application entry points and runtime configuration |
 | `data/` | Raw and processed datasets |
+| `docs/` | Project documentation |
+| `models/` | Trained model artifacts and serialized outputs |
 | `notebooks/` | Jupyter notebooks for exploration and analysis |
-| `src/` | Application source code |
 | `scripts/` | Utility and automation scripts |
+| `src/` | Application source code |
 | `tests/` | Pytest test files |
+| `.claude/hooks/` | Shell hooks triggered by Claude Code events |
 | `.claude/rules/` | Behavioral rules loaded automatically by Claude Code |
 | `.claude/skills/` | Invokable command skills (ruff-lint, ty-check, pytest) |
+| `.devcontainer/` | Dev container configuration (Dockerfile, docker-compose) |
+| `.github/` | GitHub Actions workflows, Dependabot, and CODEOWNERS |
+| `.vscode/` | VS Code workspace settings and recommended extensions |
 
 ## Rules & Skills
 
