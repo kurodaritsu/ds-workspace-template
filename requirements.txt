@@ -122,7 +122,7 @@ pygments==2.19.1
     #   pytest
 pyparsing==3.2.3
     # via matplotlib
-pytest==9.0.2
+pytest==9.0.3
 python-dateutil==2.9.0.post0
     # via
     #   jupyter-client
