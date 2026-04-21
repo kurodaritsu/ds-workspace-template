@@ -15,10 +15,4 @@ if echo "$command" | grep -qE '(^|[;&|]\s*)(pip|pip3)\s'; then
     exit 2
 fi
 
-# Enforce podman over docker
-if echo "$command" | grep -qE '(^|[;&|]\s*)docker\s'; then
-    echo "Use 'podman' instead of 'docker' (project convention)" >&2
-    exit 2
-fi
-
 exit 0
