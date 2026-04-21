@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  run-pytest:
+  ci-test:
     runs-on: ubuntu-latest
 
     steps:
