@@ -1,0 +1,667 @@
+# Instincts generated from https://github.com/kurodaritsu/ds-workspace-template
+# Generated: 2026-04-21T10:22:29.873Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: ds-workspace-template-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Commit Length
+
+## Action
+
+Keep commit messages concise (~49 characters)
+
+## Evidence
+
+- Average commit message length: 49 chars
+- Based on 88 commits
+
+---
+id: ds-workspace-template-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: ds-workspace-template-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: ds-workspace-template-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: ds-workspace-template-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: utils
+
+---
+id: ds-workspace-template-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: ds-workspace-template-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: **/*.test.*
+
+---
+id: ds-workspace-template-workflow-python-dependency-upgrade
+trigger: "when doing python dependency upgrade"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Workflow Python Dependency Upgrade
+
+## Action
+
+Follow the python-dependency-upgrade workflow:
+1. Update the package version in pyproject.toml (if applicable).
+2. Update requirements.txt to reflect the new version.
+3. Regenerate uv.lock to synchronize the lockfile with the new dependency versions.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: pyproject.toml, requirements.txt, uv.lock
+
+---
+id: ds-workspace-template-workflow-dependabot-single-requirements-update
+trigger: "when doing dependabot single requirements update"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Workflow Dependabot Single Requirements Update
+
+## Action
+
+Follow the dependabot-single-requirements-update workflow:
+1. Update the package version in requirements.txt.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: requirements.txt
+
+---
+id: ds-workspace-template-workflow-devcontainer-configuration-update
+trigger: "when doing devcontainer configuration update"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Workflow Devcontainer Configuration Update
+
+## Action
+
+Follow the devcontainer-configuration-update workflow:
+1. Edit .devcontainer/devcontainer.json to add or update settings.
+2. Optionally, edit .devcontainer/Dockerfile or .devcontainer/docker-compose.yml if the base image or services need changes.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: .devcontainer/devcontainer.json, .devcontainer/Dockerfile, .devcontainer/docker-compose.yml
+
+---
+id: ds-workspace-template-workflow-vscode-settings-update
+trigger: "when doing vscode settings update"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Workflow Vscode Settings Update
+
+## Action
+
+Follow the vscode-settings-update workflow:
+1. Edit .vscode/settings.json to update workspace settings.
+2. Optionally, edit .vscode/extensions.json to add or remove recommended extensions.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: .vscode/settings.json, .vscode/extensions.json
+
+---
+id: ds-workspace-template-workflow-add-or-update-github-actions-workflow
+trigger: "when doing add or update github actions workflow"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Workflow Add Or Update Github Actions Workflow
+
+## Action
+
+Follow the add-or-update-github-actions-workflow workflow:
+1. Edit or add files in .github/workflows/ (e.g., python-test.yml, dependabot-uv-sync.yml, renovate_security_fixes.yml).
+2. Optionally, update .github/dependabot.yml or .github/renovate.json for configuration.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: .github/workflows/*.yml, .github/dependabot.yml, .github/renovate.json
+
+---
+id: ds-workspace-template-workflow-add-or-update-claude-skills-and-rules
+trigger: "when doing add or update claude skills and rules"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Workflow Add Or Update Claude Skills And Rules
+
+## Action
+
+Follow the add-or-update-claude-skills-and-rules workflow:
+1. Add or update files in .claude/skills/ (e.g., SKILL.md, reference.md, examples.md).
+2. Add or update files in .claude/rules/ (e.g., lint-and-format.md, type-checking.md).
+3. Optionally, update .claude/settings.json or hooks in .claude/hooks/.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: .claude/skills/*, .claude/rules/*, .claude/settings.json
+
+---
+id: ds-workspace-template-workflow-feature-implementation-with-tests-and-docs
+trigger: "when doing feature implementation with tests and docs"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Workflow Feature Implementation With Tests And Docs
+
+## Action
+
+Follow the feature-implementation-with-tests-and-docs workflow:
+1. Implement feature in src/ (e.g., add new module or function).
+2. Add or update tests in tests/.
+3. Update configuration files as needed (e.g., pyproject.toml, ruff.toml).
+4. Update documentation files (e.g., CLAUDE.md).
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: src/**/*.py, tests/**/*.py, CLAUDE.md
+
+---
+id: ds-workspace-template-instinct-camelcase-files
+trigger: "When creating or renaming Python files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Camelcase Files
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files: camelCase
+
+---
+id: ds-workspace-template-instinct-camelcase-functions
+trigger: "When defining a function in Python"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Camelcase Functions
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: ds-workspace-template-instinct-pascalcase-classes
+trigger: "When defining a class in Python"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Pascalcase Classes
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: ds-workspace-template-instinct-screaming-constants
+trigger: "When defining a constant in Python"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Screaming Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: ds-workspace-template-instinct-relative-imports
+trigger: "When importing modules within the package"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Relative Imports
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: ds-workspace-template-instinct-named-exports
+trigger: "When exporting functions or classes from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Named Exports
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: ds-workspace-template-instinct-test-location-separate
+trigger: "When adding tests for a module"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Test Location Separate
+
+## Action
+
+Place test files in the separate 'tests' directory
+
+## Evidence
+
+- Pattern in architecture.testLocation: separate
+- Files in tests/
+
+---
+id: ds-workspace-template-instinct-test-naming
+trigger: "When naming test files"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Test Naming
+
+## Action
+
+Use the pattern <module>.test.py
+
+## Evidence
+
+- Pattern in workflows.feature-development.filesInvolved: '**/*.test.*'
+
+---
+id: ds-workspace-template-instinct-test-sequence
+trigger: "When implementing a new feature"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Test Sequence
+
+## Action
+
+Add or update tests immediately after feature implementation
+
+## Evidence
+
+- Pattern in workflows.feature-development.commitSequence: 'Add tests for feature'
+
+---
+id: ds-workspace-template-instinct-commit-prefix-conventional
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Commit Prefix Conventional
+
+## Action
+
+Use a conventional commit prefix (e.g., feat:, fix:, bump:), followed by a concise description
+
+## Evidence
+
+- Seen in commit: 'feat: automate uv lockfile sync on Dependabot pip PRs (#38)'
+- Seen in commit: 'Bump pygments from 2.19.1 to 2.20.0 (#66)'
+
+---
+id: ds-workspace-template-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Commit Length
+
+## Action
+
+Keep the commit message concise (average length ~49 characters)
+
+## Evidence
+
+- Pattern in commits.averageLength: 49
+
+---
+id: ds-workspace-template-instinct-python-dependency-upgrade
+trigger: "When a Python package needs to be upgraded"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Python Dependency Upgrade
+
+## Action
+
+Update pyproject.toml, requirements.txt, and regenerate uv.lock
+
+## Evidence
+
+- Workflow: python-dependency-upgrade
+- Commits: 'Bump pygments from 2.19.1 to 2.20.0 (#66)'
+- Pattern in files: pyproject.toml, requirements.txt, uv.lock
+
+---
+id: ds-workspace-template-instinct-dependabot-single-requirements-update
+trigger: "When a single Python dependency is updated directly in requirements.txt"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Dependabot Single Requirements Update
+
+## Action
+
+Update the package version in requirements.txt only
+
+## Evidence
+
+- Workflow: dependabot-single-requirements-update
+- Commits: 'Bump pillow from 12.1.1 to 12.2.0 (#64)'
+- Pattern in files: requirements.txt
+
+---
+id: ds-workspace-template-instinct-devcontainer-configuration-update
+trigger: "When the development container setup needs modification"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Devcontainer Configuration Update
+
+## Action
+
+Edit .devcontainer/devcontainer.json and optionally Dockerfile or docker-compose.yml
+
+## Evidence
+
+- Workflow: devcontainer-configuration-update
+- Files: .devcontainer/devcontainer.json, .devcontainer/Dockerfile, .devcontainer/docker-compose.yml
+
+---
+id: ds-workspace-template-instinct-vscode-settings-update
+trigger: "When VSCode workspace settings or extensions need updating"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Vscode Settings Update
+
+## Action
+
+Edit .vscode/settings.json and optionally .vscode/extensions.json
+
+## Evidence
+
+- Workflow: vscode-settings-update
+- Files: .vscode/settings.json, .vscode/extensions.json
+
+---
+id: ds-workspace-template-instinct-github-actions-update
+trigger: "When CI or automation workflows need to be added or updated"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Github Actions Update
+
+## Action
+
+Edit or add files in .github/workflows/, and optionally update .github/dependabot.yml or .github/renovate.json
+
+## Evidence
+
+- Workflow: add-or-update-github-actions-workflow
+- Files: .github/workflows/*.yml, .github/dependabot.yml, .github/renovate.json
+
+---
+id: ds-workspace-template-instinct-claude-skills-update
+trigger: "When Claude AI skills, rules, or hooks need to be added or updated"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Claude Skills Update
+
+## Action
+
+Add or update files in .claude/skills/, .claude/rules/, .claude/settings.json, or .claude/hooks/
+
+## Evidence
+
+- Workflow: add-or-update-claude-skills-and-rules
+- Files: .claude/skills/*, .claude/rules/*, .claude/settings.json, .claude/hooks/*
+
+---
+id: ds-workspace-template-instinct-feature-implementation-with-tests-and-docs
+trigger: "When adding a new feature"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Feature Implementation With Tests And Docs
+
+## Action
+
+Implement feature in src/, add/update tests in tests/, update config files, and update documentation
+
+## Evidence
+
+- Workflow: feature-implementation-with-tests-and-docs
+- Files: src/**/*.py, tests/**/*.py, CLAUDE.md, pyproject.toml, ruff.toml
+
