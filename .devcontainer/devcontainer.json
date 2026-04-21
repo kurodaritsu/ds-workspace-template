@@ -1,36 +1,19 @@
 {
     "name": "${localWorkspaceFolderBasename}-devcontainer",
-    "dockerComposeFile": "../.devcontainer/docker-compose.yml",
-    "service": "vscode",
+    "image": "mcr.microsoft.com/devcontainers/python:3.13-trixie",
     "remoteUser": "vscode",
-    "runServices": [
-        "vscode"
-    ],
-    "workspaceFolder": "/workspace",
+    "forwardPorts": [8888],
     "mounts": [
         {
-            "source": "cache-${devcontainerId}",
-            "target": "/home/${remoteUser}/.cache",
-            "type": "volume"
-        },
-        {
-            "source": "${localEnv:HOME}/.ssh",
-            "target": "/home/${remoteUser}/.ssh",
-            "type": "bind"
-        },
-        {
-            "source": "venv-${devcontainerId}",
-            "target": "${containerWorkspaceFolder}/.venv",
-            "type": "volume"
-        },
-        {
             "source": "${localEnv:HOME}/.claude",
-            "target": "/home/${remoteUser}/.claude",
+            "target": "/tmp/.claude-host",
             "type": "bind"
         }
     ],
-    "updateContentCommand": "sudo chown -R vscode /home/vscode/.cache /home/vscode/.ssh ${containerWorkspaceFolder}/.venv",
-    "postCreateCommand": "uv sync",
+    "updateContentCommand": {
+        "0": "bash .devcontainer/scripts/install_uv.sh",
+        "1": "bash .devcontainer/scripts/setup_claude.sh"
+    },
     "containerEnv": {
         "PYTHONPATH": "${containerWorkspaceFolder}",
         "UV_PROJECT_ENVIRONMENT": "${containerWorkspaceFolder}/.venv",
