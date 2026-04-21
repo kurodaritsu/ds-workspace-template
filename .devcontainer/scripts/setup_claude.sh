@@ -3,11 +3,11 @@ curl -fsSL https://claude.ai/install.sh | bash
 if [ -d /tmp/.claude-host ]; then
     mkdir -p /home/vscode/.claude
 
-    for dir in hooks rules skills; do
+    for dir in agents commands hooks rules skills; do
         [ -d "/tmp/.claude-host/$dir" ] && sudo cp -r "/tmp/.claude-host/$dir" "/home/vscode/.claude/"
     done
 
-    for file in CLAUDE.md settings.json .credentials.json; do
+    for file in CLAUDE.md settings.json .credentials.json statusline-command.sh; do
         [ -f "/tmp/.claude-host/$file" ] && sudo cp "/tmp/.claude-host/$file" "/home/vscode/.claude/"
     done
 
