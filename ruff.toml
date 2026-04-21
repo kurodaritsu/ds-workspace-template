@@ -72,6 +72,7 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 [lint.pylint]
 max-args = 6
+max-nested-blocks = 2
 
 [format]
 quote-style = "double"
