@@ -1,4 +1,4 @@
-name: Python Test
+name: "CI: Unit Test"
 
 on:
   pull_request:
@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  run-pytest:
+  ci-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,6 +29,15 @@ jobs:
 
       - name: Install dependencies
         run: uv sync
+
+      - name: Lint
+        run: uv run ruff check
+
+      - name: Format check
+        run: uv run ruff format --check
+
+      - name: Type check
+        run: uv run ty check
 
       - name: Run Pytest
         run: uv run pytest tests/
