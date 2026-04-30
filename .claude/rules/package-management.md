@@ -1,6 +1,6 @@
 # Package Management
 
-Use `uv` to manage all dependencies. Never manually edit the dependency lists in `pyproject.toml`.
+Use `uv` to manage all dependencies. Never manually edit the dependency lists in [`pyproject.toml`](../../pyproject.toml).
 
 ## Adding and removing dependencies
 
