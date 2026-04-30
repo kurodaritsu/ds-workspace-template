@@ -35,3 +35,5 @@ git commit -s -m "your message"
 ```
 
 This appends a `Signed-off-by` trailer to the commit, satisfying the repository's DCO requirement.
+
+Do not write `Signed-off-by` manually in the commit message body when using `-s` — git adds it automatically from your git config, and a duplicate trailer is just noise.
