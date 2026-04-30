@@ -12,7 +12,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 |---|---|
 | `.claude/hooks/` | Shell hooks triggered by Claude Code events |
 | `.claude/rules/` | Behavioral rules loaded automatically by Claude Code |
-| `.claude/skills/` | Invokable command skills (ruff-lint, ty-check, pytest) |
 | `.devcontainer/` | Dev container configuration (Dockerfile, docker-compose) |
 | `.github/` | GitHub Actions workflows, Dependabot, and CODEOWNERS |
 | `.vscode/` | VS Code workspace settings and recommended extensions |
@@ -38,9 +37,3 @@ Behavioral guidance lives in `.claude/rules/`:
 - [`logging.md`](.claude/rules/logging.md) — use `get_logger`, never `print()`
 - [`type-checking.md`](.claude/rules/type-checking.md) — ty type checker policy
 - [`git-workflow.md`](.claude/rules/git-workflow.md) — feature branches, protected main
-
-Runnable command skills live in `.claude/skills/`:
-
-- [`ruff-lint/`](.claude/skills/ruff-lint/SKILL.md) — ruff check and format commands
-- [`ty-check/`](.claude/skills/ty-check.SKILL.md) — ty check command
-- [`pytest/`](.claude/skills/pytest/SKILL.md) — pytest invocation patterns
