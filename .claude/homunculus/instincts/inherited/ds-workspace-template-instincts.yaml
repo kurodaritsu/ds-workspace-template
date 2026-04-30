@@ -1,0 +1,348 @@
+# Instincts generated from https://github.com/kurodaritsu/ds-workspace-template
+# Generated: 2026-04-30T03:24:59.297Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: ds-workspace-template-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Commit Length
+
+## Action
+
+Write moderate-length commit messages (~58 characters)
+
+## Evidence
+
+- Average commit message length: 58 chars
+- Based on 7 commits
+
+---
+id: ds-workspace-template-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: ds-workspace-template-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: ds-workspace-template-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: ds-workspace-template-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: ds-workspace-template-workflow-update-lint-type-check-rules-and-hooks
+trigger: "when doing update lint type check rules and hooks"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Workflow Update Lint Type Check Rules And Hooks
+
+## Action
+
+Follow the update-lint-type-check-rules-and-hooks workflow:
+1. Modify or expand documentation in .claude/rules/ (e.g., lint-and-format.md, type-checking.md) to include new commands, flags, or guidance.
+2. Update corresponding automation hook scripts in .claude/hooks/ (e.g., ruff_lint.sh, ty_check.sh) to reflect new behaviors or formats.
+3. Ensure consistency in messaging and output between documentation and hooks.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .claude/rules/lint-and-format.md, .claude/rules/type-checking.md, .claude/hooks/ruff_lint.sh
+
+---
+id: ds-workspace-template-workflow-deprecate-and-absorb-skills-into-rules
+trigger: "when doing deprecate and absorb skills into rules"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Workflow Deprecate And Absorb Skills Into Rules
+
+## Action
+
+Follow the deprecate-and-absorb-skills-into-rules workflow:
+1. Expand rule files in .claude/rules/ to absorb content from .claude/skills/ (e.g., commands, examples, references).
+2. Delete the now-redundant skill files from .claude/skills/.
+3. Update any project documentation (e.g., CLAUDE.md) to reflect the new structure.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .claude/rules/lint-and-format.md, .claude/rules/type-checking.md, .claude/skills/ruff-lint/SKILL.md
+
+---
+id: ds-workspace-template-instinct-file-naming
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct File Naming
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files: camelCase
+
+---
+id: ds-workspace-template-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions: camelCase
+
+---
+id: ds-workspace-template-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes: PascalCase
+
+---
+id: ds-workspace-template-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: ds-workspace-template-instinct-import-style
+trigger: "When importing modules in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle: relative
+
+---
+id: ds-workspace-template-instinct-export-style
+trigger: "When exporting from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle: named
+
+---
+id: ds-workspace-template-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+
+---
+id: ds-workspace-template-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Commit Format
+
+## Action
+
+Write a concise, descriptive message (average ~58 characters) without a prefix
+
+## Evidence
+
+- Pattern in commits.prefixes: [] (no prefixes)
+- Pattern in commits.averageLength: 58
+- Examples: 'Skip diff output in ruff hook; notify only when file changes', 'Format echo messages to have a consistent format'
+
+---
+id: ds-workspace-template-instinct-update-lint-type-workflow
+trigger: "When someone wants to update or improve linting/formatting/type-checking workflows, rules, or automation scripts"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Update Lint Type Workflow
+
+## Action
+
+Update documentation in .claude/rules/ and corresponding automation hook scripts in .claude/hooks/ to reflect new behaviors, ensuring consistency between docs and scripts
+
+## Evidence
+
+- Workflow: update-lint-type-check-rules-and-hooks
+- Commits: 'Expand lint, format, and type-check rules; absorb skill content', 'Add Ruff Check, Ruff Check (No Cache), and ty Check VS Code tasks'
+
+---
+id: ds-workspace-template-instinct-absorb-skills-into-rules
+trigger: "When someone wants to simplify documentation by merging skill content into rule references and cleaning up old skill files"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: kurodaritsu/ds-workspace-template
+---
+
+# Ds Workspace Template Instinct Absorb Skills Into Rules
+
+## Action
+
+Expand rule files in .claude/rules/ to absorb content from .claude/skills/, delete redundant skill files, and update project documentation (e.g., CLAUDE.md)
+
+## Evidence
+
+- Workflow: deprecate-and-absorb-skills-into-rules
+- Commits: 'Expand lint, format, and type-check rules; absorb skill content', 'Remove deprecated skills now absorbed into rules', 'Update CLAUDE.md project directory dereferencing skills/'
+
