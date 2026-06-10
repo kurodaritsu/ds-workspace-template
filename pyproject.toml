@@ -1,6 +1,6 @@
 [project]
 name = "ds-container-workspace"
-version = "2026.03.003"
+version = "2026.06.001"
 requires-python = "==3.13.*"
 license = { file = "LICENSE" }
 
@@ -17,6 +17,7 @@ dependencies = [
     "tornado==6.5.5",
     "fonttools==4.61.0",
     "pillow==12.2.0",
+    "idna==3.15",
 ]
 
 [dependency-groups]
